@@ -11,6 +11,7 @@ import { HobbiesComponent } from './components/hobbies/hobbies.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { NgbdCarouselPauseComponent } from './components/ngbd-carousel-pause/ngbd-carousel-pause.component';
+import { AccordionBasicComponent } from './components/accordion-basic/accordion-basic.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NgbdCarouselPauseComponent } from './components/ngbd-carousel-pause/ngb
     ContactComponent,
     HobbiesComponent,
     PageNotFoundComponent,
-    NgbdCarouselPauseComponent
+    NgbdCarouselPauseComponent,
+    AccordionBasicComponent
   ],
   imports: [
     BrowserModule,

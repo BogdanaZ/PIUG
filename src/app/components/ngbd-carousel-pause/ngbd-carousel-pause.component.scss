@@ -1,12 +1,10 @@
 .carousel-container {
   position: relative;
-  .picsum-img-wrapper {
-    img {
-      min-width: 100%;
-      min-height: calc(100vh - 56px);
-      max-height: calc(100vh - 56px);
-    }
-  }
+  //.picsum-img-wrapper {
+  //  img {
+  //
+  //  }
+  //}
   .carousel-shadow {
     position: absolute;
     top: 0;
@@ -20,7 +18,7 @@
   }
   ::ng-deep{
     .carousel-indicators {
-      bottom: 45px;
+      //bottom: 45px;
     }
 
     .carousel-control-prev,

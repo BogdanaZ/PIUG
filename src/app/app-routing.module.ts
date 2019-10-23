@@ -23,7 +23,7 @@ const routes: Routes = [
     component: ContactComponent
   },
   {
-    path: 'hobbies',
+    path: 'technologies',
     pathMatch: 'full',
     component: HobbiesComponent
   },

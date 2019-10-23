@@ -3,6 +3,36 @@ body {
   overflow-x: hidden;
 }
 * {
-  font-family: 'Poppins', sans-serif; ;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  &:focus{
+    outline: none;
+  }
+}
+.btn-link.hover, .btn-link:hover,
+.btn-link.focus, .btn-link:focus,
+a:hover {
+  text-decoration: none;
+}
+a, button {
+  cursor: pointer;
+}
+button:focus{
+  outline: none;
+}
+.hidden {
+  display: none!important;
+}
+.fas {
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+.full-height {
+  min-width: 100%;
+  min-height: calc(100vh - 2 * 56px);
+  max-height: calc(100vh - 2 * 56px);
+}
+.orange-link{
+  color: #F7941D;
 }
 

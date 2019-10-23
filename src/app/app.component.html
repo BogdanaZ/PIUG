@@ -8,22 +8,23 @@
     aria-controls="navbarSupportedContent"
     aria-expanded="false"
     aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon" [ngClass]="{ 'hidden': navbarOpen }"></span>
+    <i class="fas fa-times" [ngClass]="{ 'hidden': !navbarOpen }"></i>
   </button>
 
   <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Acasă <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="" (click)="toggleNavbar()" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Acasă <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="about" routerLinkActive="active">Informații</a>
+        <a class="nav-link" routerLink="about" (click)="toggleNavbar()" routerLinkActive="active">Informații</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="hobbies" routerLinkActive="active">Statistici</a>
+        <a class="nav-link" routerLink="technologies" (click)="toggleNavbar()" routerLinkActive="active">Tehnologi folosite</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="contact" routerLinkActive="active">Contact și referințe</a>
+        <a class="nav-link" routerLink="contact" (click)="toggleNavbar()" routerLinkActive="active">Contact și referințe</a>
       </li>
     </ul>
   </div>
