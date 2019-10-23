@@ -1,0 +1,18 @@
+.navbar-brand {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 11;
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+
+  .footer-link{
+    color: #F7941D;
+  }
+}
+
