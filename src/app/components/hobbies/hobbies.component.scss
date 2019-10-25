@@ -1,0 +1,23 @@
+.card-image {
+  width: 100%;
+}
+.card:nth-of-type(even) {
+  border-color: #F7941D;
+  //color: #fff;
+}
+.card-margin-bottom img{
+  margin-bottom: 15px;
+}
+
+.parallax-tehnologii {
+  background-image: url(https://www.thomsonreuters.com/content/dam/ewp-m/images/image-library/en/photography/201138-118072186.jpeg.transform/hero-s/q90/image.jpg);
+}
+
+@media all and (min-width: 576px) and (max-width: 991px) {
+  .card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+
