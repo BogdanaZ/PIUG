@@ -1,16 +1,31 @@
 <div class="carousel-container">
-  <ngb-carousel #carousel interval="10000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+  <ngb-carousel #carousel interval="2000000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
     <ng-template ngbSlide *ngFor="let img of images; index as i">
         <div class="picsum-img-wrapper">
-          <img class="full-height" [src]="img" alt="My image {{i + 1}} description">
+          <img class="full-height-image" [src]="img" alt="PIUG" (load)="dosomething($event)">
+          <div class="loader-container">
+            <div class="spinner-grow text-warning loader" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
         </div>
     </ng-template>
   </ngb-carousel>
-  <div class="carousel-shadow">
-    <div class="container height-full">
+  <div class="carousel-text">
+    <div class="carousel-shadow col-sm-12 col-md-12 col-lg-10"></div>
+    <div class="container height-full width-full">
       <div class="row justify-content-end align-items-center height-full">
-        <div class="col-sm-12 col-md-9 col-lg-6 text-white">
-          <h3>Informaţii despre proiectarea interfeţelor utilizator</h3>
+        <div class="col-sm-12 col-md-9 col-lg-5 text-white">
+          <h3 class="name-project">PIUG</h3>
+          <div class="animation-container">
+            <div class="animated-container">
+              Informaţii despre proiectare interfeţelor utilizator.<br />
+              Importanţa interfeţei cu utilizatorul.<br />
+              Uniformitatea interfeţelor utilizator.<br/>
+              Principii de proiectare a interfeţelor utilizator.<br>
+              Principii, aspect şi comportament.
+            </div>
+          </div>
         </div>
       </div>
     </div>

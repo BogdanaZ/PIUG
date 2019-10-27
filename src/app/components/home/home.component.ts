@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  isOpen = true;
   constructor() { }
 
   ngOnInit() {
   }
-
+  toggle() {
+    this.isOpen = !this.isOpen;
+  }
 }

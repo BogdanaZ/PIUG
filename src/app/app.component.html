@@ -1,15 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar ">
   <button
     class="navbar-toggler"
     type="button"
     (click)="toggleNavbar()"
+    [ngClass]="{ 'open': navbarOpen }"
     data-toggle="collapse"
     data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent"
     aria-expanded="false"
     aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" [ngClass]="{ 'hidden': navbarOpen }"></span>
-    <i class="fas fa-times" [ngClass]="{ 'hidden': !navbarOpen }"></i>
+    <div class="icon-navbar"></div>
+    <div class="menu-link text-white">
+      Menu
+    </div>
   </button>
 
   <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
@@ -18,26 +21,24 @@
         <a class="nav-link" routerLink="" (click)="toggleNavbar()" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Acasă <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="about" (click)="toggleNavbar()" routerLinkActive="active">Informații</a>
+        <a class="nav-link" routerLink="about" (click)="toggleNavbar()" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Informații</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="technologies" (click)="toggleNavbar()" routerLinkActive="active">Tehnologii folosite</a>
+        <a class="nav-link" routerLink="technologies" (click)="toggleNavbar()" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Tehnologii folosite</a>
       </li>
-      <!--<li class="nav-item">-->
-        <!--<a class="nav-link" routerLink="contact" (click)="toggleNavbar()" routerLinkActive="active">Contact și referințe</a>-->
-      <!--</li>-->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="contact" (click)="toggleNavbar()" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Contact și referințe</a>
+      </li>
     </ul>
   </div>
-
-  <a class="navbar-brand" routerLink="">
-    <img src="assets/logo.png" alt="Bogdana Zadic"/>
-  </a>
 </nav>
 
-<router-outlet></router-outlet>
 
-<footer class="page-footer font-small blue">
-  <div class="footer-copyright text-center py-3">© 2019 Copyright:
-    <a href="https://www.linkedin.com/in/bogdanamonicazadic/" target="_blank" class="footer-link"> Bogdana Monica Zadic</a>
+<a class="navbar-brand" routerLink="">
+  <div class="brand-name text-white">Bogdana Monica<br/>Zadic</div>
+</a>
+
+  <div
+    [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
   </div>
-</footer>

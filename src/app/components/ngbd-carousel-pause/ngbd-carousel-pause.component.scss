@@ -1,24 +1,97 @@
+@keyframes move{
+  0%  { top: 0; }
+  20% { top: -24px; }
+  40% { top: -48px; }
+  60% { top: -72px; }
+  80% { top: -96px; }
+}
+
+@keyframes run {
+  0% {left: -100vw;}
+  10%, 60% {left: calc((100% - 5%) / 2);}
+  70%, 100% {left: 100vw;}
+}
+
+@keyframes rotating {
+  0%, 10% {transform: rotate(0deg);}
+  60%, 100% {transform: rotate(-1turn);}
+}
+
+
 .carousel-container {
   position: relative;
-  //.picsum-img-wrapper {
-  //  img {
-  //
-  //  }
-  //}
-  .carousel-shadow {
+  .carousel-text {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.7);
+    &:before {
+      content: "";
+      position: absolute;
+      left: -41%;
+      top: -34%;
+      width: 50%;
+      background: rgba(0, 0, 0, 0.7);
+      height: 200%;
+      transform: rotate(23deg);
+      right: -6%;
+      border: 5px solid #F7941D;
+    }
+    .carousel-shadow {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.7);
+      height: 200%;
+      transform: rotate(23deg);
+      right: -6%;
+      top: -31%;
+      border: 5px solid #F7941D;
+    }
+    .name-project {
+      font-size: 94px;
+      background: -webkit-linear-gradient(top, #f7941d 0%,#f2e4d5 100%);
+      background: linear-gradient(to bottom, #f7941d 0%,#f2e4d5 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .animation-container {
+      overflow: hidden;
+      position: relative;
+      height: 24px;
+    }
+    .animated-container {
+      display: inline-block;
+      color: #fff;
+      position: relative;
+      white-space: nowrap;
+      top: 0;
+      left: 0;
+      animation: move 5s;
+      animation-iteration-count:infinite;
+      animation-delay:1s;
+    }
   }
   .carousel-caption {
     bottom: 90px;
   }
   ::ng-deep{
-    .carousel-indicators {
-      //bottom: 45px;
+    .carousel.slide {
+      width: 100vw;
+      height: 100vh;
+    }
+    .carousel-inner {
+      min-width: 100vw;
+      width: auto;
+      min-height: 100vh;
+      height: auto;
+      .full-height-image {
+        min-width: 100vw;
+        min-height: 100vh;
+        width: auto;
+        height: auto;
+        max-height: 99999px;
+        max-width: 99999px;
+      }
     }
 
     .carousel-control-prev,
@@ -28,6 +101,50 @@
   }
   .height-full {
     height: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .carousel-container {
+    .carousel-text {
+      &:before {
+        display: none;
+      }
+      .carousel-shadow {
+        height: 100%;
+        transform: rotate(0);
+        right: 0%;
+        top: 0;
+        border: none;
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  @keyframes move{
+    0%  { top: 0; }
+    20% { top: -24px; }
+    40% { top: -48px; }
+    60% { top: -72px; }
+    80% { top: -96px; }
+  }
+
+  @-webkit-keyframes move {
+    0%  { top: 0; }
+    20% { top: -24px; }
+    40% { top: -48px; }
+    60% { top: -72px; }
+    80% { top: -96px; }
+  }
+  .carousel-container {
+    .carousel-text {
+      .animation-container {
+        height: 48px;
+        .animated-container {
+          white-space: normal;
+        }
+      }
+    }
   }
 }
 
