@@ -10,22 +10,26 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: HomeComponent
+    component: HomeComponent,
+    data: {animation: 'HomePage'}
   },
   {
     path: 'about',
     pathMatch: 'full',
-    component: AboutComponent
+    component: AboutComponent,
+    data: { animation: 'AboutPage' }
   },
   {
     path: 'contact',
     pathMatch: 'full',
-    component: ContactComponent
+    component: ContactComponent,
+    data: { animation: 'ContactPage' }
   },
   {
     path: 'technologies',
     pathMatch: 'full',
-    component: HobbiesComponent
+    component: HobbiesComponent,
+    data: { animation: 'technologiesPage' }
   },
   {
     path: '',

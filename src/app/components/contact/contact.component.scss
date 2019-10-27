@@ -1,0 +1,33 @@
+.page-footer {
+  width: 100%;
+  background: #fff;
+  .container-footer {
+    max-width: 100%;
+  }
+  .footer-link{
+    display: inline-block;
+    color: #000;
+    position: relative;
+    &::after{
+      content: " ";
+      display: block;
+      height: 2px;
+      width: 0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: #F7941D;
+      transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
+    }
+    &:hover,
+    &.active {
+      //background: red;
+      &::after {
+        width: 100%;
+      }
+    }
+    br {
+      line-height: 10px;
+    }
+  }
+}

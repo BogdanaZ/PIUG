@@ -8,7 +8,7 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/n
   styleUrls: ['ngbd-carousel-pause.component.scss']
 })
 export class NgbdCarouselPauseComponent {
-  images = [1, 2, 3, 4, 5, 6, 7].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
+  images = [1, 2, 3, 4, 5, 6, 7].map(() => `http://placeimg.com/900/500/tech?random&t=${Math.random()}`);
   paused = true;
   unpauseOnArrow = false;
   pauseOnIndicator = true;
@@ -33,5 +33,10 @@ export class NgbdCarouselPauseComponent {
     if (this.pauseOnIndicator && !slideEvent.paused && slideEvent.source === NgbSlideEventSource.INDICATOR) {
       this.togglePaused();
     }
+  }
+
+  dosomething(event) {
+    const element = event.currentTarget;
+    element.nextSibling.classList.add('hidden');
   }
 }
