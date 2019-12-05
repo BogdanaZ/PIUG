@@ -1,6 +1,220 @@
+.content-contact {
+  font-size: 25px;
+  color: rgba(255, 255, 255, 1);
+  background-color: #F7941D;
+  text-align: center;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 20%;
+  min-height: 100vh;
+}
+
+label {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+textarea,
+input {
+  outline: none;
+  border-radius: 0;
+  text-align: center;
+  background: none;
+  font-weight: 700;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 1);
+  max-width: 90%;
+  padding: 15px;
+  border: 2px dashed rgba(255, 255, 255, 0);
+  box-sizing: border-box;
+  cursor: text;
+}
+
+textarea {
+  text-align: left;
+  /* overflow:hidden; */
+
+  resize: none;
+  width: 90%;
+  border-color: rgba(255, 255, 255, 0)
+}
+
+textarea:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px dashed rgba(255, 255, 255, 1);
+}
+
+textarea:focus:required:valid {
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+textarea:required:valid {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+input {
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+input:required,
+textarea:required {
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+input:focus {
+  border-bottom: 2px dashed rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+input:required:valid {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+input:required:invalid {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.expanding {
+  vertical-align: top;
+}
+
+.send-icn {
+  fill: rgba(255, 255, 255, 1)
+}
+
+.send-icn:hover {
+  fill: rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+button {
+  position: relative;
+  background: none;
+  border: none;
+  outline: none;
+  margin: 2vmax;
+  height: 75px;
+}
+
+button:hover small {
+  opacity: 1;
+}
+svg {
+  fill: #ffffff;
+  height: 71px;
+  transition: fill 0.4s ;
+}
+button:hover svg {
+  fill: #000;
+}
+
+small {
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.4s;
+  white-space: nowrap;
+}
+
+.new_email {
+  left: -100%;
+}
+
+.reset-svg {
+  height: 50px;
+}
+
+.website {
+  opacity: 1;
+  font-size: 16px;
+  color: white;
+  position: relative;
+  text-align: center;
+  display: block;
+  margin-top: 7%;
+
+}
+
+.website a {
+  color: white;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label {
+  padding-left: 53px;
+  height: 43px;
+  display: inline-block;
+  line-height: 51px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 19px;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: url(http://www.csscheckbox.com/checkboxes/u/csscheckbox_c7bbfae6713f6bfaa9d524ad5dd33367.png);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+input[type=checkbox]:checked + label {
+  background-position: 0 -50px;
+}
+.terms {
+  color: black;
+}
+
+.error-container,
+.successful-container {
+  margin-bottom: 45px;
+}
+
 .page-footer {
   width: 100%;
-  background: #fff;
+  font-size: 15px;
   .container-footer {
     max-width: 100%;
   }

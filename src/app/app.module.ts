@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -14,6 +14,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { NgbdCarouselPauseComponent } from './components/ngbd-carousel-pause/ngbd-carousel-pause.component';
 import { AccordionBasicComponent } from './components/accordion-basic/accordion-basic.component';
 import { NgScrollbarModule } from 'ngx-scrollbar';
+import { TermsComponent } from './components/terms/terms.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,15 +26,17 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
     HobbiesComponent,
     PageNotFoundComponent,
     NgbdCarouselPauseComponent,
-    AccordionBasicComponent
+    AccordionBasicComponent,
+    TermsComponent
   ],
   imports: [
     NgbModule,
-    FormsModule,
     BrowserModule,
     AppRoutingModule,
     NgScrollbarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

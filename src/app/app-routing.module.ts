@@ -5,6 +5,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HobbiesComponent } from './components/hobbies/hobbies.component';
 import { PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
+import {TermsComponent} from './components/terms/terms.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,12 @@ const routes: Routes = [
     pathMatch: 'full',
     component: HobbiesComponent,
     data: { animation: 'technologiesPage' }
+  },
+  {
+    path: 'terms',
+    pathMatch: 'full',
+    component: TermsComponent,
+    data: { animation: 'termsPage' }
   },
   {
     path: '',

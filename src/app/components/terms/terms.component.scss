@@ -1,0 +1,21 @@
+.parallax-terms {
+  background-image: url(https://www.ozwebguru.com/wp-content/uploads/2018/09/terms_and_conditions_banner.jpg);
+}
+b {
+  color: #F7941D;
+}
+h3 {
+  color: #F7941D;
+}
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: #F7941D;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
